@@ -17,7 +17,7 @@ class BurgerIngredient extends Component {
             case ('meat'):
                 ingredient = getMeat();
                 break;
-            case ('chease'):
+            case ('cheese'):
                 ingredient = getCheese();
                 break;
             case ('salad'):
