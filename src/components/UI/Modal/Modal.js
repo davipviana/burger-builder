@@ -7,7 +7,7 @@ import styles from './Modal.module.css';
 
 const Modal = (props) => (
     <Wrapper>
-        <Backdrop visible={props.visible} />
+        <Backdrop visible={props.visible} onClick={props.onModalClosed} />
         <div
             className={styles.Modal}
             style={{
