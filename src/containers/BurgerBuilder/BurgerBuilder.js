@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
 import Wrapper from '../../hoc/Wrapper';
+import Modal from '../../components/UI/Modal/Modal';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
+import OrderSummary from '../../components/Burger/OrderSummary.js/OrderSummary';
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -56,8 +58,9 @@ class BurgerBuilder extends Component {
     }
 
     updatePutchasableState(ingredients) {
-        const ingredientsAmount = Object.keys(ingredients)
-            .map(key => ingredients[key])
+        const ingredientsTypes = Object.keys(ingredients);
+        const ingredientsAmount = ingredientsTypes
+            .map(ingredientType => ingredients[ingredientType])
             .reduce((sum, el) => sum = sum + el, 0);
 
         this.setState({ purchasable: ingredientsAmount > 0 });
@@ -72,6 +75,9 @@ class BurgerBuilder extends Component {
 
         return (
             <Wrapper>
+                <Modal>
+                    <OrderSummary ingredients={this.state.ingredients} />
+                </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
                     onAddIngredient={this.addIngredientHandler}
