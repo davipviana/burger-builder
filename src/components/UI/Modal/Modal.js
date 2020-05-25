@@ -8,7 +8,7 @@ import styles from './Modal.module.css';
 class Modal extends Component {
 
     shouldComponentUpdate(nextProps, _) {
-        return (nextProps.visible !== this.props.visible);
+        return (nextProps.visible !== this.props.visible || nextProps.children !== this.props.children);
     }
 
     render() {
