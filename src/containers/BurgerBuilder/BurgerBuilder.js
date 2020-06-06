@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Wrapper from '../../hoc/Wrapper/Wrapper';
 import Modal from '../../components/UI/Modal/Modal';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
@@ -131,7 +130,7 @@ class BurgerBuilder extends Component {
         };
 
         return (
-            <Wrapper>
+            <React.Fragment>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
                     onAddIngredient={this.addIngredientHandler}
@@ -140,7 +139,7 @@ class BurgerBuilder extends Component {
                     disabled={disabledInfo}
                     price={this.state.totalPrice}
                     purchasable={this.state.purchasable} />
-            </Wrapper>
+            </React.Fragment>
         );
     };
 
@@ -157,12 +156,12 @@ class BurgerBuilder extends Component {
         }
 
         return (
-            <Wrapper>
+            <React.Fragment>
                 <Modal visible={this.state.purchasing} onModalClosed={this.purchaseCancelHandler}>
                     {orderSummary}
                 </Modal>
                 {burger}
-            </Wrapper>
+            </React.Fragment>
         );
     };
 }

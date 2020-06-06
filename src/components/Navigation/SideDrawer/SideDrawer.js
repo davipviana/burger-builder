@@ -3,7 +3,6 @@ import React from 'react';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import Wrapper from '../../../hoc/Wrapper/Wrapper';
 
 import styles from './SideDrawer.module.css';
 
@@ -15,7 +14,7 @@ const SideDrawer = (props) => {
     }
 
     return (
-        <Wrapper>
+        <React.Fragment>
             <Backdrop visible={props.visible} onClick={props.onClose} />
             <div className={sideDrawerClasses.join(' ')}>
                 <div className={styles.Logo}>
@@ -25,7 +24,7 @@ const SideDrawer = (props) => {
                     <NavigationItems />
                 </nav>
             </div>
-        </Wrapper>
+        </React.Fragment>
     );
 };
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Wrapper from '../Wrapper/Wrapper';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
@@ -21,7 +20,7 @@ class Layout extends Component {
 
     render() {
         return (
-            <Wrapper>
+            <React.Fragment>
                 <Toolbar onClickDrawerToggle={this.sideDrawerToggleClickHandler} />
                 <SideDrawer
                     visible={this.state.showSideDrawer}
@@ -30,7 +29,7 @@ class Layout extends Component {
                 <main className={styles.Content}>
                     {this.props.children}
                 </main>
-            </Wrapper>
+            </React.Fragment>
         );
     }
 }

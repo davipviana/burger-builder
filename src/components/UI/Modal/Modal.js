@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Wrapper from '../../../hoc/Wrapper/Wrapper';
 import Backdrop from '../Backdrop/Backdrop';
 
 import styles from './Modal.module.css';
@@ -13,7 +12,7 @@ class Modal extends Component {
 
     render() {
         return (
-            <Wrapper>
+            <React.Fragment>
                 <Backdrop visible={this.props.visible} onClick={this.props.onModalClosed} />
                 <div
                     className={styles.Modal}
@@ -22,7 +21,7 @@ class Modal extends Component {
                     }}>
                     {this.props.children}
                 </div>
-            </Wrapper>
+            </React.Fragment>
         );
     }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Wrapper from '../../../hoc/Wrapper/Wrapper';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
@@ -17,7 +16,7 @@ class OrderSummary extends Component {
             });
 
         return (
-            <Wrapper>
+            <React.Fragment>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -27,7 +26,7 @@ class OrderSummary extends Component {
                 <p>Continue to Checkout?</p>
                 <Button type="Danger" onClick={this.props.onCancel}>CANCEL</Button>
                 <Button type="Success" onClick={this.props.onContinue}>CONTINUE</Button>
-            </Wrapper>
+            </React.Fragment>
         );
     }
 };
