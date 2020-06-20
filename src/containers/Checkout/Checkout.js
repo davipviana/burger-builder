@@ -18,11 +18,9 @@ class Checkout extends Component {
     render() {
         let summary = (<Redirect to="/" />);
 
-        if (this.props.ingredients) {
-            const purchasedRedirect = this.props.purchased ? <Redirect to="/" /> : null;
+        if (this.props.ingredients && !this.props.purchased) {
             summary = (
                 <div>
-                    {purchasedRedirect}
                     <CheckoutSummary
                         ingredients={this.props.ingredients}
                         onCancel={this.checkoutCancelHandler}
