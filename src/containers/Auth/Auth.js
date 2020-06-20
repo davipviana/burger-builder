@@ -114,9 +114,18 @@ class Auth extends Component {
       form = <Spinner />
     }
 
+    let errorMessage = null;
+
+    if (this.props.error) {
+      errorMessage = (
+        <p>{this.props.error.message}</p>
+      );
+    }
+
     return (
       <div className={styles.Auth}>
         <h3>{this.state.isSignup ? 'SIGNUP' : 'SIGNIN'}</h3>
+        {errorMessage}
         <form onSubmit={this.submitHandler}>
           {form}
           <Button type="Success">SUBMIT</Button>
@@ -131,7 +140,8 @@ class Auth extends Component {
 
 const mapStateToProps = state => {
   return {
-    loading: state.auth.loading
+    loading: state.auth.loading,
+    error: state.auth.error
   }
 }
 
