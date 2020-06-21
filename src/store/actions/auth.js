@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
 
-const API_KEY = '';
+const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 
 const authStart = () => {
   return {
