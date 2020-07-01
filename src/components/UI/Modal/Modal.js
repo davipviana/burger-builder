@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Transition from 'react-transition-group/Transition';
 
 import Backdrop from '../Backdrop/Backdrop';
 
@@ -10,17 +11,26 @@ class Modal extends Component {
         return (nextProps.visible !== this.props.visible || nextProps.children !== this.props.children);
     }
 
+    renderModalByTransitionState = (state) => {
+        const cssStyles = [
+            styles.Modal,
+            state === 'entering'
+                ? styles.ModalOpen
+                : state === 'exiting' ? styles.ModalClosed : null
+        ];
+
+        return (<div className={cssStyles.join(' ')}>
+            {this.props.children}
+        </div>);
+    }
+
     render() {
         return (
             <React.Fragment>
                 <Backdrop visible={this.props.visible} onClick={this.props.onModalClosed} />
-                <div
-                    className={styles.Modal}
-                    style={{
-                        transform: this.props.visible ? 'translateY(0)' : 'translateY(-100vh)'
-                    }}>
-                    {this.props.children}
-                </div>
+                <Transition in={this.props.visible} timeout={300} mountOnEnter unmountOnExit>
+                    {state => this.renderModalByTransitionState(state)}
+                </Transition>
             </React.Fragment>
         );
     }
