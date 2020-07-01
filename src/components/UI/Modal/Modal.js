@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Transition from 'react-transition-group/Transition';
+import CSSTransition from 'react-transition-group/CSSTransition';
 
 import Backdrop from '../Backdrop/Backdrop';
 
@@ -16,26 +16,25 @@ class Modal extends Component {
         return (nextProps.visible !== this.props.visible || nextProps.children !== this.props.children);
     }
 
-    renderModalByTransitionState = (state) => {
-        const cssStyles = [
-            styles.Modal,
-            state === 'entering'
-                ? styles.ModalOpen
-                : state === 'exiting' ? styles.ModalClosed : null
-        ];
-
-        return (<div className={cssStyles.join(' ')}>
-            {this.props.children}
-        </div>);
-    }
-
     render() {
         return (
             <React.Fragment>
                 <Backdrop visible={this.props.visible} onClick={this.props.onModalClosed} />
-                <Transition in={this.props.visible} timeout={modalAnimationTiming} mountOnEnter unmountOnExit>
-                    {state => this.renderModalByTransitionState(state)}
-                </Transition>
+                <CSSTransition
+                    mountOnEnter
+                    unmountOnExit
+                    in={this.props.visible}
+                    timeout={modalAnimationTiming}
+                    classNames={{
+                        enter: '',
+                        enterActive: styles.ModalOpen,
+                        exit: '',
+                        exitActive: styles.ModalClosed
+                    }}>
+                    <div className={styles.Modal}>
+                        {this.props.children}
+                    </div>
+                </CSSTransition>
             </React.Fragment>
         );
     }
