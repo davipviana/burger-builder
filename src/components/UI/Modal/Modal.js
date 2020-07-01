@@ -5,6 +5,11 @@ import Backdrop from '../Backdrop/Backdrop';
 
 import styles from './Modal.module.css';
 
+const modalAnimationTiming = {
+    enter: 400,
+    exit: 1000
+};
+
 class Modal extends Component {
 
     shouldComponentUpdate(nextProps, _) {
@@ -28,7 +33,7 @@ class Modal extends Component {
         return (
             <React.Fragment>
                 <Backdrop visible={this.props.visible} onClick={this.props.onModalClosed} />
-                <Transition in={this.props.visible} timeout={300} mountOnEnter unmountOnExit>
+                <Transition in={this.props.visible} timeout={modalAnimationTiming} mountOnEnter unmountOnExit>
                     {state => this.renderModalByTransitionState(state)}
                 </Transition>
             </React.Fragment>
