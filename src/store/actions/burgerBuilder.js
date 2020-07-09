@@ -14,16 +14,16 @@ export const removeIngredient = (name) => {
     };
 }
 
-export const fetchIngredientsSucceed = (ingredients) => {
+export const fetchIngredientsSuccess = (ingredients) => {
     return {
-        type: actionTypes.FETCH_INGREDIENTS_SUCCEED,
+        type: actionTypes.FETCH_INGREDIENTS_SUCCESS,
         ingredients: ingredients
     };
 }
 
-export const fetchIngredientsFailed = () => {
+export const fetchIngredientsFail = () => {
     return {
-        type: actionTypes.FETCH_INGREDIENTS_FAILED
+        type: actionTypes.FETCH_INGREDIENTS_FAIL
     };
 }
 

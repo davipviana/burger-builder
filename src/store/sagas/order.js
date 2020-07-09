@@ -7,7 +7,7 @@ export function* purchaseBurgerSaga(action) {
   yield put(actions.purchaseBurgerStart());
   try {
     const response = yield axios.post('/orders.json?auth=' + action.token, action.order);
-    yield put(actions.purchaseBurgerSucceed(response.data.name, action.order));
+    yield put(actions.purchaseBurgerSuccess(response.data.name, action.order));
   } catch (error) {
     yield put(actions.purchaseBurgerFail(error));
   }

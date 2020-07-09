@@ -3,11 +3,11 @@ import { put } from 'redux-saga/effects';
 
 import * as actions from '../actions';
 
-export function* initIngredientsSaga(action) {
+export function* initIngredientsSaga(_) {
   try {
     const response = yield axios.get('/ingredients.json')
-    yield put(actions.fetchIngredientsSucceed(response.data));
+    yield put(actions.fetchIngredientsSuccess(response.data));
   } catch (_) {
-    yield put(actions.fetchIngredientsFailed());
+    yield put(actions.fetchIngredientsFail());
   }
 }

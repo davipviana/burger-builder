@@ -15,9 +15,9 @@ export const authStart = () => {
   };
 };
 
-export const authSucceed = (idToken, userId) => {
+export const authSuccess = (idToken, userId) => {
   return {
-    type: actionTypes.AUTH_SUCCEED,
+    type: actionTypes.AUTH_SUCCESS,
     idToken: idToken,
     userId: userId
   };
@@ -36,9 +36,9 @@ export const logoutInit = () => {
   };
 }
 
-export const logoutSucceed = () => {
+export const logoutSuccess = () => {
   return {
-    type: actionTypes.AUTH_LOGOUT_SUCCEED
+    type: actionTypes.AUTH_LOGOUT_SUCCESS
   };
 }
 
