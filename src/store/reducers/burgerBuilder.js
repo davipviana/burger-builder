@@ -39,7 +39,7 @@ const removeIngredient = (state, action) => {
     };
 }
 
-const setIngredients = (state, action) => {
+const fetchIngredientsStart = (state, action) => {
     return {
         ...state,
         ingredients: action.ingredients,
@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_INGREDIENT: return addIngredient(state, action);
         case actionTypes.REMOVE_INGREDIENT: return removeIngredient(state, action);
-        case actionTypes.SET_INGREDIENTS: return setIngredients(state, action);
+        case actionTypes.FETCH_INGREDIENTS_SUCCEED: return fetchIngredientsStart(state, action);
         case actionTypes.FETCH_INGREDIENTS_FAILED: return fetchIngredientsFailed(state, action);
         default: return state;
     }
