@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
 import Backdrop from '../Backdrop/Backdrop';
@@ -10,34 +10,32 @@ const modalAnimationTiming = {
     exit: 1000
 };
 
-class Modal extends Component {
-
-    shouldComponentUpdate(nextProps, _) {
-        return (nextProps.visible !== this.props.visible || nextProps.children !== this.props.children);
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <Backdrop visible={this.props.visible} onClick={this.props.onModalClosed} />
-                <CSSTransition
-                    mountOnEnter
-                    unmountOnExit
-                    in={this.props.visible}
-                    timeout={modalAnimationTiming}
-                    classNames={{
-                        enter: '',
-                        enterActive: styles.ModalOpen,
-                        exit: '',
-                        exitActive: styles.ModalClosed
-                    }}>
-                    <div className={styles.Modal}>
-                        {this.props.children}
-                    </div>
-                </CSSTransition>
-            </React.Fragment>
-        );
-    }
+const Modal = (props) => {
+    return (
+        <React.Fragment>
+            <Backdrop visible={props.visible} onClick={props.onModalClosed} />
+            <CSSTransition
+                mountOnEnter
+                unmountOnExit
+                in={props.visible}
+                timeout={modalAnimationTiming}
+                classNames={{
+                    enter: '',
+                    enterActive: styles.ModalOpen,
+                    exit: '',
+                    exitActive: styles.ModalClosed
+                }}>
+                <div className={styles.Modal}>
+                    {props.children}
+                </div>
+            </CSSTransition>
+        </React.Fragment>
+    );
 }
 
-export default Modal;
+export default React.memo(
+    Modal,
+    (prevProps, nextProps) =>
+        nextProps.visible === prevProps.visible &&
+        nextProps.children === prevProps.children
+);

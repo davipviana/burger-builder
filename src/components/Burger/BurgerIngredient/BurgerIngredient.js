@@ -1,37 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './BurgerIngredient.module.css';
 
-class BurgerIngredient extends Component {
-    render() {
-        let ingredient = null;
+const BurgerIngredient = (props) => {
+    let ingredient = null;
 
-        switch (this.props.type) {
-            case ('bread-bottom'):
-                ingredient = getBreadBottom();
-                break;
-            case ('bread-top'):
-                ingredient = getBreadTop();
-                break;
-            case ('meat'):
-                ingredient = getMeat();
-                break;
-            case ('cheese'):
-                ingredient = getCheese();
-                break;
-            case ('salad'):
-                ingredient = getSalad();
-                break;
-            case ('bacon'):
-                ingredient = getBacon();
-                break;
-            default:
-                ingredient = null;
-        }
-
-        return ingredient;
+    switch (props.type) {
+        case ('bread-bottom'):
+            ingredient = getBreadBottom();
+            break;
+        case ('bread-top'):
+            ingredient = getBreadTop();
+            break;
+        case ('meat'):
+            ingredient = getMeat();
+            break;
+        case ('cheese'):
+            ingredient = getCheese();
+            break;
+        case ('salad'):
+            ingredient = getSalad();
+            break;
+        case ('bacon'):
+            ingredient = getBacon();
+            break;
+        default:
+            ingredient = null;
     }
+
+    return ingredient;
 }
 
 const getBreadBottom = () => (<div className={styles.BreadBottom}></div>);
