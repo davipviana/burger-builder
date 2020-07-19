@@ -3,6 +3,13 @@ This is a funny React application where you can log in, build and order a custom
 
 ![Screeshots](docs/assets/screenshots.png)
 
+Included React features:
+- [Redux](https://redux.js.org/)
+- [Redux Saga](https://redux-saga.js.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+
 ## Getting started
 ### Prerequisites
 
