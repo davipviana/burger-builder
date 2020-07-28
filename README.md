@@ -1,9 +1,9 @@
 # Burger Builder
-This is a funny React application where you can log in, build and order a custom burger. It's optimized to work on mobile devices and was created using [Create React App](https://github.com/facebook/create-react-app).
+This is a funny React application where you can log in, build and order a custom burger. It's optimized for mobile devices and was created using [Create React App](https://github.com/facebook/create-react-app).
 
 ![Screeshots](docs/assets/screenshots.png)
 
-Included React features:
+Tools, features and libs used:
 - [Redux](https://redux.js.org/)
 - [Redux Saga](https://redux-saga.js.org/)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
@@ -13,7 +13,7 @@ Included React features:
 ## Getting started
 ### Prerequisites
 
-- [Firebase](https://firebase.google.com/) project (free)
+- [Firebase](https://firebase.google.com/) project (it's free)
 - `node` >= 8.10
 - `yarn` >= 0.25
 
@@ -50,5 +50,7 @@ Open http://localhost:3000 to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 yarn
+
 ## License
+
 **Burger Builder** is open source software [licensed as MIT](https://github.com/davipviana/burger-builder/blob/master/LICENSE).
