@@ -30,10 +30,10 @@ const BurgerBuilder = (props) => {
         initIngredients();
     }, [initIngredients]);
 
-    const isPurchasable = (ingredients) => {
-        const ingredientsTypes = Object.keys(ingredients);
+    const isPurchasable = (ingredientsToCheck) => {
+        const ingredientsTypes = Object.keys(ingredientsToCheck);
         const ingredientsAmount = ingredientsTypes
-            .map(ingredientType => ingredients[ingredientType])
+            .map(ingredientType => ingredientsToCheck[ingredientType])
             .reduce((sum, el) => sum = sum + el, 0);
 
         return ingredientsAmount > 0;
