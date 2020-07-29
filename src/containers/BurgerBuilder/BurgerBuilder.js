@@ -104,6 +104,4 @@ const BurgerBuilder = (props) => {
     );
 }
 
-
-
 export default withErrorHandler(BurgerBuilder, axios);
