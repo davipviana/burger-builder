@@ -22,7 +22,7 @@ const BurgerBuilder = (props) => {
     const dispatch = useDispatch();
     const addIngredient = (ingredientName) => dispatch(actions.addIngredient(ingredientName));
     const removeIngredient = (ingredientName) => dispatch(actions.removeIngredient(ingredientName));
-    const initIngredients = useCallback(() => dispatch(actions.initIngredients()), [dispatch]);
+    const initIngredients = useCallback(() => dispatch(actions.fetchIngredientsStart()), [dispatch]);
     const initPurchase = () => dispatch(actions.initPurchase());
     const setAuthRedirectPath = (path) => dispatch(actions.setAuthRedirectPath(path));
 
