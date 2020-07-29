@@ -185,7 +185,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        orderBurger: (order, token) => dispatch(actions.purchaseBurger(order, token))
+        orderBurger: (order, token) => dispatch(actions.purchaseBurgerInit(order, token))
     };
 };
 
