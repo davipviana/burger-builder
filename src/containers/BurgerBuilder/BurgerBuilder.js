@@ -68,7 +68,7 @@ const BurgerBuilder = (props) => {
     const getBurger = () => {
         const disabledInfo = { ...ingredients };
 
-        for (let key in disabledInfo) {
+        for (const key in disabledInfo) {
             disabledInfo[key] = disabledInfo[key] <= 0
         };
 
