@@ -1,4 +1,9 @@
 # Burger Builder
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=davipviana_burger-builder&metric=alert_status)](https://sonarcloud.io/dashboard?id=davipviana_burger-builder)
+![Build application](https://github.com/davipviana/burger-builder/workflows/Build%20application/badge.svg?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is a funny React application where you can log in, build and order a custom burger. It's optimized for mobile devices and was created using [Create React App](https://github.com/facebook/create-react-app).
 
 ![Screeshots](docs/assets/screenshots.png)
