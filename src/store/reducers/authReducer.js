@@ -32,7 +32,11 @@ const setAuthRedirectPath = (state, action) => {
   return updateObject(state, { authRedirectPath: action.path });
 }
 
-const reducer = (state = initialState, action) => {
+const authReducer = (state, action) => {
+  if (state === undefined || state === null) {
+    state = initialState;
+  }
+
   switch (action.type) {
     case actionTypes.AUTH_START: return authStart(state);
     case actionTypes.AUTH_SUCCESS: return authSuccess(state, action);
@@ -43,4 +47,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer;
+export default authReducer;

@@ -45,7 +45,11 @@ const fetchOrdersFail = (state, action) => {
   return updateObject(state, { loading: false, error: action.error });
 }
 
-const reducer = (state = initialState, action) => {
+const orderReducer = (state, action) => {
+  if (state === undefined || state === null) {
+    return initialState;
+  }
+
   switch (action.type) {
     case actionTypes.PURCHASE_INIT: return purchaseInit(state);
     case actionTypes.PURCHASE_BURGER_START: return purchaseBurgerStart(state);
@@ -58,4 +62,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default orderReducer;

@@ -9,9 +9,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import burgerBuilderReducer from './store/reducers/burgerBuilder';
-import orderReducer from './store/reducers/order';
-import authReducer from './store/reducers/auth';
+import burgerBuilderReducer from './store/reducers/burgerBuilderReducer';
+import orderReducer from './store/reducers/orderReducer';
+import authReducer from './store/reducers/authReducer';
 import { watchAuth, watchBurgerBuilder, watchOrder } from './store/sagas';
 
 const composeEnhancers = (
