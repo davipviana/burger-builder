@@ -25,6 +25,8 @@ const BurgerIngredient = (props) => {
         case ('bacon'):
             ingredient = getBacon();
             break;
+        default:
+            throw new Error('Unsupported ingredient type');
     }
 
     return ingredient;
