@@ -126,8 +126,8 @@ const ContactData = (props) => {
         updatedOrderForm[inputIdentifier] = updatedFormElement;
 
         let isValid = true;
-        for (const inputIdentifier in updatedOrderForm) {
-            isValid = updatedOrderForm[inputIdentifier].valid && isValid;
+        for (const identifier in updatedOrderForm) {
+            isValid = updatedOrderForm[identifier].valid && isValid;
         }
 
         setOrderForm(updatedOrderForm);

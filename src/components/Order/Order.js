@@ -4,7 +4,7 @@ import styles from './Order.module.css';
 
 const Order = (props) => {
     const ingredients = [];
-    for (let ingredientKey in props.ingredients) {
+    for (const ingredientKey in props.ingredients) {
         ingredients.push({
             name: ingredientKey,
             amount: props.ingredients[ingredientKey]
