@@ -53,7 +53,10 @@ const fetchIngredientsFail = (state, action) => {
     return updateObject(state, { error: true });
 }
 
-const burgerBuilderReducer = (state = initialState, action) => {
+const burgerBuilderReducer = (state, action) => {
+    if (state === undefined || state === null)
+        return initialState;
+
     switch (action.type) {
         case actionTypes.ADD_INGREDIENT: return addIngredient(state, action);
         case actionTypes.REMOVE_INGREDIENT: return removeIngredient(state, action);
