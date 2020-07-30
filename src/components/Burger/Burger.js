@@ -21,13 +21,12 @@ const Burger = (props) => {
 const getBurgerIngredients = (ingredients) => {
     const ingredientsTypes = Object.keys(ingredients);
 
-    const burgerIngredients = ingredientsTypes
+    return ingredientsTypes
         .map(ingredientType => {
             const ingredientCount = ingredients[ingredientType];
             return getBurgerIngredientsOfType(ingredientType, ingredientCount);
         })
         .reduce((arr, el) => arr.concat(el), []);
-    return burgerIngredients;
 }
 
 const getBurgerIngredientsOfType = (ingredientType, amount) => {

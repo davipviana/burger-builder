@@ -42,11 +42,7 @@ const Input = (props) => {
             );
             break;
         default:
-            inputElement = <input
-                className={inputStyles.join(' ')}
-                {...props.elementConfig}
-                value={props.value}
-                onChange={props.onChange} />;
+            throw new Error('Unsupported input element type');
     }
 
     return (

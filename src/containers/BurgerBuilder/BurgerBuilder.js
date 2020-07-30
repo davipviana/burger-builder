@@ -34,7 +34,7 @@ const BurgerBuilder = (props) => {
         const ingredientsTypes = Object.keys(ingredientsToCheck);
         const ingredientsAmount = ingredientsTypes
             .map(ingredientType => ingredientsToCheck[ingredientType])
-            .reduce((sum, el) => sum = sum + el, 0);
+            .reduce((sum, el) => sum + el, 0);
 
         return ingredientsAmount > 0;
     }
@@ -70,7 +70,7 @@ const BurgerBuilder = (props) => {
 
         for (const key in disabledInfo) {
             disabledInfo[key] = disabledInfo[key] <= 0
-        };
+        }
 
         return (
             <React.Fragment>

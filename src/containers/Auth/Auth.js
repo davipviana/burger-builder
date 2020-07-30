@@ -77,7 +77,7 @@ const Auth = (props) => {
   };
 
   const formElementsArray = [];
-  for (let key in controls) {
+  for (const key in controls) {
     formElementsArray.push({
       id: key,
       config: controls[key]

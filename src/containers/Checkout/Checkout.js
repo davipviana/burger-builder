@@ -26,7 +26,7 @@ const Checkout = (props) => {
                     onCancel={checkoutCancelHandler}
                     onContinue={checkoutContinueHandler} />
                 <Route
-                    path={props.match.path + '/contact-data'}
+                    path={`${props.match.path}/contact-data`}
                     component={ContactData} />
             </div>
         );
