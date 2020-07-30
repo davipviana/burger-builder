@@ -25,8 +25,6 @@ const BurgerIngredient = (props) => {
         case ('bacon'):
             ingredient = getBacon();
             break;
-        default:
-            ingredient = null;
     }
 
     return ingredient;
