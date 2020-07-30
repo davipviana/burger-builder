@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import axios from '../../../axios-orders';
+import axiosInstance from '../../../axiosInstance';
 
 import Button from '../../../components/UI/Button/Button';
 import Input from '../../../components/UI/Input/Input';
@@ -102,7 +102,7 @@ const ContactData = (props) => {
         event.preventDefault();
 
         const formData = {};
-        for (let formElementIdentifier in orderForm) {
+        for (const formElementIdentifier in orderForm) {
             formData[formElementIdentifier] = orderForm[formElementIdentifier].value;
         }
 
@@ -126,7 +126,7 @@ const ContactData = (props) => {
         updatedOrderForm[inputIdentifier] = updatedFormElement;
 
         let isValid = true;
-        for (let inputIdentifier in updatedOrderForm) {
+        for (const inputIdentifier in updatedOrderForm) {
             isValid = updatedOrderForm[inputIdentifier].valid && isValid;
         }
 
@@ -135,7 +135,7 @@ const ContactData = (props) => {
     }
 
     const formElements = [];
-    for (let key in orderForm) {
+    for (const key in orderForm) {
         formElements.push({
             id: key,
             config: orderForm[key]
@@ -186,4 +186,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axiosInstance));
