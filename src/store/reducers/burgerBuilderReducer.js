@@ -54,8 +54,9 @@ const fetchIngredientsFail = (state, action) => {
 }
 
 const burgerBuilderReducer = (state, action) => {
-    if (state === undefined || state === null)
+    if (state === undefined || state === null) {
         return initialState;
+    }
 
     switch (action.type) {
         case actionTypes.ADD_INGREDIENT: return addIngredient(state, action);

@@ -46,8 +46,9 @@ const fetchOrdersFail = (state, action) => {
 }
 
 const orderReducer = (state, action) => {
-  if (state === undefined || state === null)
+  if (state === undefined || state === null) {
     return initialState;
+  }
 
   switch (action.type) {
     case actionTypes.PURCHASE_INIT: return purchaseInit(state);

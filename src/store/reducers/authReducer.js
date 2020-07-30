@@ -33,8 +33,9 @@ const setAuthRedirectPath = (state, action) => {
 }
 
 const authReducer = (state, action) => {
-  if (state === undefined || state === null)
+  if (state === undefined || state === null) {
     state = initialState;
+  }
 
   switch (action.type) {
     case actionTypes.AUTH_START: return authStart(state);
