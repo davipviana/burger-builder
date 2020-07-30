@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from '../../axios-orders';
+import axiosInstance from '../../axiosInstance';
 
 import Modal from '../../components/UI/Modal/Modal';
 import Burger from '../../components/Burger/Burger';
@@ -104,4 +104,4 @@ const BurgerBuilder = (props) => {
     );
 }
 
-export default withErrorHandler(BurgerBuilder, axios);
+export default withErrorHandler(BurgerBuilder, axiosInstance);
