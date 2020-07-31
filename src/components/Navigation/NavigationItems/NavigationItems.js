@@ -1,17 +1,28 @@
-import React from 'react';
+import React from "react";
 
-import NavigationItem from './NavigationItem/NavigationItem';
+import { useTranslation } from "react-i18next";
 
-import styles from './NavigationItems.module.css';
+import NavigationItem from "./NavigationItem/NavigationItem";
 
-const NavigationItems = (props) => (
+import styles from "./NavigationItems.module.css";
+
+const NavigationItems = (props) => {
+  const { t } = useTranslation();
+  return (
     <ul className={styles.NavigationItems}>
-        <NavigationItem link="/" exact>Burger Builder</NavigationItem>
-        {props.isAuthenticated ? <NavigationItem link="/orders">Orders</NavigationItem> : null}
-        {props.isAuthenticated
-            ? <NavigationItem link="/logout">Logout</NavigationItem>
-            : <NavigationItem link="/auth">Authenticate</NavigationItem>}
+      <NavigationItem link="/" exact>
+        Burger Builder
+      </NavigationItem>
+      {props.isAuthenticated ? (
+        <NavigationItem link="/orders">Orders</NavigationItem>
+      ) : null}
+      {props.isAuthenticated ? (
+        <NavigationItem link="/logout">Logout</NavigationItem>
+      ) : (
+        <NavigationItem link="/auth">{t("authenticate")}</NavigationItem>
+      )}
     </ul>
-);
+  );
+};
 
 export default NavigationItems;

@@ -1,7 +1,7 @@
-import resources from "./resources.json";
 import messages from "./messages.json";
+import resources from "./resources.json";
 
 export default {
-  ...resources,
   ...messages,
+  ...resources,
 };

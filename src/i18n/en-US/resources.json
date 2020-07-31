@@ -1,1 +1,12 @@
-{}
+{
+  "authenticate": "Authenticate",
+  "bacon": "Bacon",
+  "cheese": "Cheese",
+  "currentPrice": "Current Price",
+  "less": "Less",
+  "meat": "Meat",
+  "more": "More",
+  "orderNow": "Order Now",
+  "salad": "Salad",
+  "signUpToOrder": "Sign Up To Order"
+}
