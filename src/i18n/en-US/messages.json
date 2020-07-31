@@ -1,4 +1,5 @@
 {
   "messages.addIngredients": "Please start adding Ingredients!",
+  "messages.validInputValue": "Please enter a valid value!",
   "switchTo": "Switch To"
 }
