@@ -16,5 +16,7 @@
   "signUp": "Cadastro",
   "signUpToOrder": "Entre para pedir",
   "switchTo": "Alterar para",
-  "submit": "Enviar"
+  "submit": "Enviar",
+  "totalPrice": "Preço total",
+  "yourOrder": "Seu pedido"
 }

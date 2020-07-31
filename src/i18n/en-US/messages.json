@@ -1,5 +1,8 @@
 {
   "messages.addIngredients": "Please start adding Ingredients!",
-  "messages.validInputValue": "Please enter a valid value!",
-  "messages.tastesWell": "We hope it tastes well!"
+  "messages.continueOrder": "Continue to Checkout?",
+  "messages.ingredientsLoadFail": "Ingredients can't be loaded!",
+  "messages.orderDescription": "A delicious burger with the following ingredients",
+  "messages.tastesWell": "We hope it tastes well!",
+  "messages.validInputValue": "Please enter a valid value!"
 }

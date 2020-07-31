@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import axiosInstance from "../../axiosInstance";
 
 import Modal from "../../components/UI/Modal/Modal";
@@ -12,6 +13,7 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import * as actions from "../../store/actions";
 
 const BurgerBuilder = (props) => {
+  const { t } = useTranslation();
   const [purchasing, setPurchasing] = useState(false);
 
   const ingredients = useSelector((state) => state.burgerBuilder.ingredients);
@@ -96,7 +98,7 @@ const BurgerBuilder = (props) => {
   };
 
   let orderSummary = null;
-  let burger = error ? <p>Ingredients can't be loaded!</p> : <Spinner />;
+  let burger = error ? <p>{t("messages.ingredientsLoadFail")}</p> : <Spinner />;
   if (ingredients) {
     burger = getBurger();
     orderSummary = getOrderSummary();

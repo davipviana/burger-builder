@@ -16,5 +16,7 @@
   "signUp": "Sign Up",
   "signUpToOrder": "Sign Up To Order",
   "switchTo": "Switch To",
-  "submit": "Submit"
+  "submit": "Submit",
+  "totalPrice": "Total Price",
+  "yourOrder": "Your Order"
 }
