@@ -2,6 +2,8 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
+import storage from "../../shared/storage";
+
 import styles from "./LocaleSelector.module.css";
 
 const LocaleSelector = () => {
@@ -12,8 +14,14 @@ const LocaleSelector = () => {
     i18n.changeLanguage(languageKey);
   };
 
+  const selectedLanguage = storage.getSelectedLanguage();
+
   return (
-    <select className={styles.LocaleSelector} onChange={onChange}>
+    <select
+      className={styles.LocaleSelector}
+      value={selectedLanguage}
+      onChange={onChange}
+    >
       <option key={"pt-BR"} value={"pt-BR"}>
         PT
       </option>

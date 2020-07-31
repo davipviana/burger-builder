@@ -21,7 +21,7 @@ const BuildControls = (props) => {
       </p>
       {controls.map((ctrl) => (
         <BuildControl
-          key={ctrl.label}
+          key={ctrl.labelLanguageKey}
           label={t(ctrl.labelLanguageKey)}
           onAddIngredient={() => props.onAddIngredient(ctrl.type)}
           onRemoveIngredient={() => props.onRemoveIngredient(ctrl.type)}
