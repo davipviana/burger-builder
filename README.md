@@ -9,13 +9,16 @@ This is a funny React application where you can log in, build and order a custom
 ![Screeshots](docs/assets/screenshots.png)
 
 Tools, features and libs used:
+
 - [Redux](https://redux.js.org/)
 - [Redux Saga](https://redux-saga.js.org/)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
 - [CSS Modules](https://github.com/css-modules/css-modules)
+- [Internationalization](https://react.i18next.com)
 
 ## Getting started
+
 ### Prerequisites
 
 - [Firebase](https://firebase.google.com/) project (it's free)
@@ -23,9 +26,11 @@ Tools, features and libs used:
 - `yarn` >= 0.25
 
 ### Create Firebase Project
+
 This project needs a Firebase Project to run. Firebase is a platform powered by Google that provides some BaaS (Backend as a Service) features that allows mobile and web developers to keep focus on their applications without concern about backend freatures implementation. I this case we will use **Authentication** and **Database**.
 
 Access the firebase [documentation](https://firebase.google.com/docs), create a new project and replace the values in `.env` file with your project information:
+
 ```
 REACT_APP_FIREBASE_PROJECT_URL="https://YOUR_PROJECT_NAME.firebaseio.com/"
 REACT_APP_FIREBASE_API_KEY="YOUR_FIREBASE_API_KEY"
@@ -41,10 +46,10 @@ yarn
 
 To install all the project dependencies.
 
-
 ## Run the Application
 
 In the project directory, you can run:
+
 ```
 yarn start
 ```
