@@ -1,0 +1,11 @@
+.LocaleSelector {
+  padding: 6px;
+  margin: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+}
+
+.LocaleSelector option {
+  color: black;
+}
