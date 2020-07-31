@@ -4,6 +4,7 @@ import { initReactI18next } from "react-i18next";
 import storage from "../shared/storage";
 
 import englishResources from "./en-US";
+import portugueseResources from "./pt-BR";
 
 const ASYNC_TRANSLATION_MAP = {};
 
@@ -20,6 +21,7 @@ i18n.use(initReactI18next).init({
   },
   resources: {
     "en-US": { translation: englishResources },
+    "pt-BR": { translation: portugueseResources },
   },
 });
 
@@ -32,7 +34,7 @@ i18n.on("initialized", (opt) => {
 });
 
 i18n.on("languageChanged", (lng) => {
-  storage.setLanguageIsoCode(lng);
+  storage.setSelectedLanguage(lng);
   loadLanguage(lng);
 });
 
