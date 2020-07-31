@@ -1,0 +1,9 @@
+{
+  "messages.addIngredients": "Por favor, adicione alguns ingredientes!",
+  "messages.contactData": "Preencha seus dados de contato",
+  "messages.continueOrder": "Prosseguir com o pedido?",
+  "messages.ingredientsLoadFail": "Não conseguimos carregar os ingredientes!",
+  "messages.orderDescription": "Um hambúrguer delicioso com os seguintes ingredientes",
+  "messages.tastesWell": "Esperamos que você goste!",
+  "messages.validInputValue": "Por favor, verifique os valores adicionados!"
+}
