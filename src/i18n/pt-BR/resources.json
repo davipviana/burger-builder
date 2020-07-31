@@ -4,9 +4,14 @@
   "cheese": "Queijo",
   "currentPrice": "Preço Atual",
   "less": "Menos",
+  "mailAddress": "E-mail",
   "meat": "Carne",
   "more": "Mais",
   "orderNow": "Pedir Agora",
+  "password": "Senha",
   "salad": "Alface",
-  "signUpToOrder": "Entre para pedir"
+  "signIn": "Acesso",
+  "signUp": "Cadastro",
+  "signUpToOrder": "Entre para pedir",
+  "submit": "Enviar"
 }

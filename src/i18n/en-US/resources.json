@@ -4,9 +4,14 @@
   "cheese": "Cheese",
   "currentPrice": "Current Price",
   "less": "Less",
+  "mailAddress": "Mail Address",
   "meat": "Meat",
   "more": "More",
   "orderNow": "Order Now",
+  "password": "Password",
   "salad": "Salad",
-  "signUpToOrder": "Sign Up To Order"
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "signUpToOrder": "Sign Up To Order",
+  "submit": "Submit"
 }
