@@ -14,10 +14,10 @@ const NavigationItems = (props) => {
         Burger Builder
       </NavigationItem>
       {props.isAuthenticated ? (
-        <NavigationItem link="/orders">Orders</NavigationItem>
+        <NavigationItem link="/orders">{t("orders")}</NavigationItem>
       ) : null}
       {props.isAuthenticated ? (
-        <NavigationItem link="/logout">Logout</NavigationItem>
+        <NavigationItem link="/logout">{t("logout")}</NavigationItem>
       ) : (
         <NavigationItem link="/auth">{t("authenticate")}</NavigationItem>
       )}
