@@ -1,7 +1,9 @@
 {
   "authenticate": "Entrar",
   "bacon": "Bacon",
+  "cancel": "Cancelar",
   "cheese": "Queijo",
+  "continue": "Continuar",
   "currentPrice": "Preço Atual",
   "less": "Menos",
   "mailAddress": "E-mail",
@@ -13,5 +15,6 @@
   "signIn": "Acesso",
   "signUp": "Cadastro",
   "signUpToOrder": "Entre para pedir",
+  "switchTo": "Alterar para",
   "submit": "Enviar"
 }

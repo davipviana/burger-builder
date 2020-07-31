@@ -1,7 +1,9 @@
 {
   "authenticate": "Authenticate",
   "bacon": "Bacon",
+  "cancel": "Cancel",
   "cheese": "Cheese",
+  "continue": "Continue",
   "currentPrice": "Current Price",
   "less": "Less",
   "mailAddress": "Mail Address",
@@ -13,5 +15,6 @@
   "signIn": "Sign In",
   "signUp": "Sign Up",
   "signUpToOrder": "Sign Up To Order",
+  "switchTo": "Switch To",
   "submit": "Submit"
 }
