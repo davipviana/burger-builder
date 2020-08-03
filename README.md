@@ -27,7 +27,7 @@ Tools, features and libs used:
 
 ### Create Firebase Project
 
-This project needs a Firebase Project to run. Firebase is a platform powered by Google that provides some BaaS (Backend as a Service) features that allows mobile and web developers to keep focus on their applications without concern about backend freatures implementation. I this case we will use **Authentication** and **Database**.
+This project needs a Firebase Project to run. Firebase is a platform powered by Google that provides some BaaS (Backend as a Service) features that allows mobile and web developers to keep focus on their applications without concern about backend freatures implementation. In this case we will use **Authentication** and **Database**.
 
 Access the firebase [documentation](https://firebase.google.com/docs), create a new project and replace the values in `.env` file with your project information:
 
